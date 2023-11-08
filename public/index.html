@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>OpenBaord_Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="options-cont">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="tools-cont scale-tools">
+        <img src="Icons/Pencil.svg" class="pencil" />
+        <img src="Icons/Eraser.svg" class="eraser"/>
+        <img src="Icons/Download.svg" class="download"/>
+        <img src="Icons/Upload.svg" class="upload"/>
+        <img src="Icons/StickyNote.svg" class="sticky"/>
+        <img src="Icons/Redo.svg" class="redo"/>
+        <img src="Icons/Undo.svg" class="undo"/>
+    </div>
+
+    <div class="pencil-tool-cont">
+        <div class="pencil-width-cont">
+            <input type="range" min="2" max="10" value="10" class="pencil-width">
+        </div>
+        <div class="pencil-color-cont">
+            <div class=" black pencil-color"></div>
+            <div class="blue pencil-color"></div>
+            <div class="red pencil-color"></div>
+        </div>
+    </div>
+    <div class="eraser-tool-cont">
+        <input type="range" min="2" max="10" value="10" class="eraser-width">
+    </div>
+    <canvas></canvas>
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+    <script>
+        let socket=io.connect("http://localhost:3000");
+    </script>
+    <script src="tools.js"></script>
+    <script src="canvas.js"></script>
+    
+    
+</body>
+</html>
